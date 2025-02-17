@@ -12,7 +12,7 @@ const navLinks = [
 
 const Navbar = () => {
   return (
-    <header className="fixed top-0 left-0 w-full bg-black/90 backdrop-blur-md border-b border-white border-opacity-10 z-50">
+    <div className="fixed top-0 left-0 w-full bg-black/30 backdrop-blur-lg border-b border-white border-opacity-10 z-50">
       <div className="mx-auto px-6 lg:px-20 flex items-center justify-between">
         {/* Logo */}
         <Link
@@ -45,7 +45,7 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 

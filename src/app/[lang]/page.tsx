@@ -14,7 +14,6 @@ export default async function IndexPage(props: {
     <div className="">
       <Navbar dictionary={dictionary.counter} />
       <Hero />
-      <Hero />
     </div>
   );
 }
