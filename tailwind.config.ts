@@ -13,6 +13,10 @@ export default {
         foreground: "var(--foreground)",
         primary: "var(--primary)",
       },
+      fontFamily: {
+        poppins: ["var(--font-poppins)", "sans-serif"],
+        plus: ["var(--font-plus)", "sans-serif"],
+      },
     },
   },
   plugins: [],

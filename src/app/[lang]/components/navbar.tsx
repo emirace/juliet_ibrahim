@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navLinks = [
-  { name: "DEMOS", href: "#" },
-  { name: "PAGES", href: "#" },
-  { name: "PORTFOLIO", href: "#" },
+  { name: "HOME", href: "/" },
+  { name: "ABOUT US", href: "/about-us" },
+  { name: "FILMOGRAPHY", href: "#" },
   { name: "BLOGS", href: "#" },
   { name: "CONTACT US", href: "#" },
 ];

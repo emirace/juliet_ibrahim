@@ -12,12 +12,12 @@ const poppins = Poppins({
 const plus_jakarta_sans = Plus_Jakarta_Sans({
   variable: "--font-plus",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["200", "400", "500", "700"],
 });
 
 export const metadata = {
-  title: "i18n within app router - Vercel Examples",
-  description: "How to do i18n in Next.js 15 within app router",
+  title: "Julient Ibrahim",
+  description: "Julient Ibrahim Portfolio",
 };
 
 export async function generateStaticParams() {
