@@ -7,6 +7,7 @@ export default async function IndexPage(props: {
   const { lang } = await props.params;
 
   const dictionary = await getDictionary(lang);
+  console.log(dictionary);
 
   return <div>About US</div>;
 }

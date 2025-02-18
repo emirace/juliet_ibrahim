@@ -1,7 +1,6 @@
 import IMAGES from "@/assetes/images";
 import Image from "next/image";
 import TypingAnimation from "./typing";
-import { Facebook, Instagram, Twitter } from "lucide-react";
 import { FiFacebook } from "react-icons/fi";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
