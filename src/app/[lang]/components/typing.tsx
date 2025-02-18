@@ -79,11 +79,11 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({ texts }) => {
   };
 
   return (
-    <div className="flex justify-center items-center h-[80px] md:h-[70px] text-white">
+    <div className="flex justify-center items-center h-[50px] md:h-[70px] text-white">
       <Typewriter
         textToType={texts[textIndex]}
         onTextComplete={handleTextComplete}
-        className="text-4xl font-bold text-white"
+        className="text-3xl md:text-4xl font-bold text-white"
       />
     </div>
   );

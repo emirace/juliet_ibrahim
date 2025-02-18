@@ -7,10 +7,14 @@ import IMAGES from "@/assetes/images";
 const Book = () => {
   return (
     <section className="bg-black py-20 px-6 md:px-20">
+      <h2 className="text-2xl md:text-4xl font-medium leading-tight text-center mb-4 md:hidden">
+        Discover the Journey in{" "}
+        <span className="font-extrabold">A Toast to Life</span>
+      </h2>
       <div className="flex flex-col md:flex-row gap-12">
-        <div className=" w-2/3 ">
-          <div className=" flex gap-8  ">
-            <div className="flex flex-col gap-6 flex-1 h-[55vh]">
+        <div className=" w-full md:w-2/3 ">
+          <div className=" flex flex-col md:flex-row gap-8  ">
+            <div className="flex flex-col gap-6 md:flex-1 h-[55vh]">
               <div className="relative flex-1 h-full overflow-hidden">
                 <Image
                   src={IMAGES.book1}
@@ -32,7 +36,7 @@ const Book = () => {
             </div>
 
             <div className="flex-1 text-center md:text-left">
-              <h2 className="text-2xl md:text-4xl font-medium leading-tight">
+              <h2 className="text-2xl md:text-4xl font-medium leading-tight hidden md:block">
                 Discover the Journey in{" "}
                 <span className="font-extrabold">A Toast to Life</span>
               </h2>
@@ -51,7 +55,7 @@ const Book = () => {
           </div>
 
           {/* Bottom Stats */}
-          <div className="mt-12 flex flex-col md:flex-row justify-center md:justify-around border-t border-white border-opacity-20 py-6 items-center text-center md:text-left gap-6">
+          <div className="mt-12 flex justify-center md:justify-around border-t w-full border-white border-opacity-20 py-6 items-center text-center md:text-left gap-6">
             <div className="text-3xl font-bold text-center">
               5<p className="text-sm text-gray-400">CHAPTERS</p>
             </div>
@@ -64,7 +68,7 @@ const Book = () => {
         </div>
 
         {/* Right Image */}
-        <div className="relative w-1/3 h-[70vh] overflow-hidden">
+        <div className="relative w-full md:w-1/3 h-[70vh] overflow-hidden">
           <Image
             src={IMAGES.book3}
             alt="Discussion"

@@ -20,7 +20,7 @@ const Filmography = () => {
             <span className="font-bold">SELECTED</span> WORKS.
           </div>
         </div>
-        <button className="px-8 py-2 border border-white rounded-full font-semibold transition hover:bg-white hover:text-black">
+        <button className="hidden md:block px-8 py-2 border border-white rounded-full font-semibold transition hover:bg-white hover:text-black">
           VIEW ALL
         </button>
       </div>
@@ -42,6 +42,11 @@ const Filmography = () => {
             />
           </div>
         ))}
+      </div>
+      <div className="flex justify-center mt-12">
+        <button className="md:hidden  px-8 py-2 border border-white rounded-full font-semibold transition hover:bg-white hover:text-black">
+          VIEW ALL
+        </button>
       </div>
     </div>
   );

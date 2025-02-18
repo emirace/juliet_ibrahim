@@ -6,11 +6,11 @@ import { FaChromecast } from "react-icons/fa";
 
 const AboutMe = () => {
   return (
-    <section className="py-20 px-6 lg:px-20 flex flex-col lg:flex-row items-center">
+    <section className="relative pt-32 md:pt-20 py-20 px-6 lg:px-20 flex flex-col lg:flex-row items-center">
       {/* Left Side - Image Section */}
       <div className="relative w-full lg:w-2/5 flex ">
-        <div className=" rounded-full border border-white border-opacity-20 p-8 lg:w-full lg:h-[90vh]">
-          <div className="relative rounded-full  overflow-hidden lg:w-full lg:h-full">
+        <div className=" rounded-full border border-white border-opacity-20 p-8 w-full h-[90vh]">
+          <div className="relative rounded-full  overflow-hidden w-full h-full">
             <Image
               src={IMAGES.about}
               alt="About Me"
@@ -35,7 +35,7 @@ const AboutMe = () => {
 
       {/* Right Side - Text Section */}
       <div className="lg:w-3/5 mt-12 lg:mt-0 lg:pl-16">
-        <h3 className="text-orange-500 text-sm uppercase tracking-widest">
+        <h3 className="absolute top-20 md:top-auto md:left-auto left-10 md:block text-orange-500 text-sm uppercase tracking-widest">
           About Me
         </h3>
         <h2 className="text-3xl lg:text-4xl font-medium mt-8 leading-tight">
