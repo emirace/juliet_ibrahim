@@ -1,4 +1,7 @@
+import { getDictionary } from "@/get-dictionary";
 import { i18n, type Locale } from "../../i18n-config";
+import Footer from "./components/footer";
+import Navbar from "./components/navbar";
 import "./globals.css";
 
 import { Poppins, Plus_Jakarta_Sans } from "next/font/google";
@@ -32,10 +35,15 @@ export default async function Root(props: {
 
   const { children } = props;
 
+  const dictionary = await getDictionary(params.lang);
+
   return (
     <html lang={params.lang}>
       <body className={`${poppins.variable} ${plus_jakarta_sans.variable}`}>
+        <Navbar dictionary={dictionary.counter} />
+
         {children}
+        <Footer />
       </body>
     </html>
   );

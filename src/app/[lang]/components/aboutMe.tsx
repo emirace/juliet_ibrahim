@@ -1,5 +1,8 @@
 import IMAGES from "@/assetes/images";
 import Image from "next/image";
+import { PiFilmReel } from "react-icons/pi";
+import { BsCameraReels } from "react-icons/bs";
+import { FaChromecast } from "react-icons/fa";
 
 const AboutMe = () => {
   return (
@@ -20,18 +23,13 @@ const AboutMe = () => {
 
         {/* Floating icons */}
         <div className="absolute top-5 left-5 w-10 h-10">
-          <Image src="/figma-icon.png" alt="Figma" width={40} height={40} />
+          <PiFilmReel className="text-16" />
         </div>
         <div className="absolute bottom-5 left-5 w-10 h-10">
-          <Image
-            src="/photoshop-icon.png"
-            alt="Photoshop"
-            width={40}
-            height={40}
-          />
+          <BsCameraReels className="text-16" />
         </div>
         <div className="absolute bottom-5 right-5 w-10 h-10">
-          <Image src="/sketch-icon.png" alt="Sketch" width={40} height={40} />
+          <FaChromecast className="text-16" />
         </div>
       </div>
 
@@ -41,30 +39,33 @@ const AboutMe = () => {
           About Me
         </h3>
         <h2 className="text-3xl lg:text-4xl font-medium mt-8 leading-tight">
-          I&apos;m <span className="font-thin">Creative Director</span> and
-          <span className="font-thin"> UI-UX Designer</span> from
-          <span className="text-orange-500"> Sydney, Australia</span>, working
-          in
-          <span className="text-orange-500"> web development</span> and print
-          media.
+          From the heart of <span className="text-orange-500">Accra</span> to
+          the global stage of <span className="text-orange-500">Nollywood</span>{" "}
+          and beyond, Juliet Ibrahim’s journey is nothing short of
+          extraordinary.
         </h2>
         <p className="text-gray-400 mt-6 leading-relaxed">
-          I enjoy turning complex problems into simple, beautiful, and intuitive
-          designs. My aim is to bring across your message and identity in the
-          most creative way. I have created web designs for many well-known
-          brands.
+          Her rise from humble beginnings to becoming one of the most celebrated
+          figures in African cinema is a testament to passion, perseverance, and
+          authentic artistry. With over two decades of captivating performances,
+          every role she takes on tells a story of triumph and transformation—a
+          narrative that has inspired millions and redefined the essence of
+          modern stardom.
+        </p>
+        <p className="text-gray-400 mt-6 leading-relaxed">
+          Juliet’s influence extends far beyond the silver screen. Her
+          commitment to uplifting communities, championing education, and
+          advocating for women’s rights shines as brightly as her on-screen
+          presence.
         </p>
 
-        {/* Stats Section */}
         <div className="mt-10 flex gap-12">
           <div>
             <h3 className="text-3xl font-bold">100%</h3>
-            <p className="text-gray-400 text-sm uppercase">
-              Clients Satisfaction
-            </p>
+            <p className="text-gray-400 text-sm uppercase">Fans Satisfaction</p>
           </div>
           <div>
-            <h3 className="text-3xl font-bold">6700</h3>
+            <h3 className="text-3xl font-bold">100+</h3>
             <p className="text-gray-400 text-sm uppercase">
               Projects Completed
             </p>

@@ -2,22 +2,22 @@ import Image from "next/image";
 
 const services = [
   {
-    title: "Web Design",
+    title: "Healthcare Support",
     description:
-      "This is the main factor that sets us apart from our competition and allows us.",
-    image: "/web-design.jpg", // Replace with actual image paths
+      "Providing essential medical services and support to underprivileged communities.",
+    image: "/healthcare-support.jpg", // Replace with actual image paths
   },
   {
-    title: "Branding",
+    title: "Educational Programs",
     description:
-      "This is the main factor that sets us apart from our competition and allows us.",
-    image: "/branding.jpg",
+      "Empowering the youth through educational initiatives and scholarship programs.",
+    image: "/educational-programs.jpg",
   },
   {
-    title: "Marketing",
+    title: "Disaster Relief",
     description:
-      "This is the main factor that sets us apart from our competition and allows us.",
-    image: "/marketing.jpg",
+      "Offering immediate assistance and resources to those affected by natural disasters.",
+    image: "/disaster-relief.jpg",
   },
 ];
 
@@ -27,17 +27,16 @@ export default function Services() {
       <div className=" grid md:grid-cols-2 gap-12">
         <div>
           <h4 className="text-orange-500 uppercase tracking-widest text-sm font-poppins">
-            Trusted Services
+            Juliet Ibrahim Foundation
           </h4>
           <h2 className="text-4xl md:text-5xl font-medium mt-4">
-            The service we offer is specifically designed to meet your needs.
+            Our services are dedicated to improving lives and providing hope.
           </h2>
           <p className="text-gray-400 mt-4">
-            Driven professionals dedicated to making a lasting impact through
-            innovative solutions and unwavering excellence.
+            Committed to humanitarian efforts, we strive to make a positive
+            impact through healthcare, education, and disaster relief.
           </p>
           <button className="mt-6 flex items-center text-white border border-white px-5 py-2 rounded-full hover:bg-white hover:text-black transition">
-            {/* <ArrowRight className="w-5 h-5 mr-2" /> */}
             Learn more
           </button>
         </div>

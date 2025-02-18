@@ -33,34 +33,32 @@ const Book = () => {
 
             <div className="flex-1 text-center md:text-left">
               <h2 className="text-2xl md:text-4xl font-medium leading-tight">
-                We believe in the{" "}
-                <span className="font-extrabold">power of</span> individual
-                contribution.
+                Discover the Journey in{" "}
+                <span className="font-extrabold">A Toast to Life</span>
               </h2>
               <p className="text-gray-400 mt-8 text-lg">
-                We back the founders of new forms of network, digital
-                organizations that harness the talents of individuals for the
-                benefit of the collective.
+                Dive into the inspiring story of resilience and triumph as
+                Juliet Ibrahim shares her personal experiences and life lessons
+                in her book, &quot;A Toast to Life.&quot;
               </p>
               <a
                 href="#"
                 className="inline-block mt-12 text-primary transition duration-300"
               >
-                More About Us →
+                Learn More About the Book →
               </a>
             </div>
           </div>
 
           {/* Bottom Stats */}
           <div className="mt-12 flex flex-col md:flex-row justify-center md:justify-around border-t border-white border-opacity-20 py-6 items-center text-center md:text-left gap-6">
-            <div className="text-3xl font-bold">
-              100%
-              <p className="text-sm text-gray-400">CLIENT SATISFACTION</p>
+            <div className="text-3xl font-bold text-center">
+              5<p className="text-sm text-gray-400">CHAPTERS</p>
             </div>
 
-            <div className="text-3xl font-bold">
-              6700
-              <p className="text-sm text-gray-400">PROJECTS COMPLETED</p>
+            <div className="text-3xl font-bold text-center">
+              300+
+              <p className="text-sm text-gray-400">PAGES</p>
             </div>
           </div>
         </div>

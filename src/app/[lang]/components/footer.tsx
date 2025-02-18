@@ -1,6 +1,8 @@
 import { Facebook, Dribbble, Linkedin, Instagram, ArrowUp } from "lucide-react";
 
 import Link from "next/link";
+import Image from "next/image";
+import IMAGES from "@/assetes/images";
 
 export default function Footer() {
   return (
@@ -8,12 +10,13 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
         {/* Logo & Contact Info */}
         <div>
-          <h2 className="text-2xl font-bold">folio</h2>
+          <Image src={IMAGES.logo} alt="Logo" width={180} height={180} />
+
           <p className="text-gray-400 mt-4">
             5919 Trussville Crossings Pkwy, Birmingham
           </p>
-          <p className="mt-2 font-semibold">Hello@webfolio.com</p>
-          <p className="text-orange-500 mt-2 font-bold">+2 456 (343) 24 45</p>
+          <p className="mt-2 font-semibold">support@julietibrahim.net</p>
+          <p className="text-orange-500 mt-2 font-bold">+124 56 7879</p>
         </div>
 
         {/* Useful Links */}
@@ -86,10 +89,7 @@ export default function Footer() {
       </div>
 
       <div className="text-center text-gray-500 text-sm mt-10 border-t border-gray-800 pt-4">
-        © 2024 Webfolio is Proudly Powered by{" "}
-        <a href="#" className="text-orange-500">
-          UiCamp
-        </a>
+        © 2025 Juliet Ibrahim. All Rights Reserved
       </div>
     </footer>
   );

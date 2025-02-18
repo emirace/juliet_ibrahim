@@ -1,5 +1,11 @@
 import IMAGES from "@/assetes/images";
 import Image from "next/image";
+import TypingAnimation from "./typing";
+import { Facebook, Instagram, Twitter } from "lucide-react";
+import { FiFacebook } from "react-icons/fi";
+import { FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { CiYoutube } from "react-icons/ci";
 
 const Hero = () => {
   return (
@@ -28,36 +34,28 @@ const Hero = () => {
         <h1 className="text-5xl md:text-7xl font-bold mt-4">
           I&apos;m <span className="text-primary">Juliet Ibrahim</span>
         </h1>
-        <h2 className="text-2xl md:text-4xl mt-2 text-gray-300">
-          I am a product designer
+        <h2 className=" flex gap-2 items-center text-2xl md:text-4xl mt-2">
+          A Force of{" "}
+          <TypingAnimation
+            texts={["Elegance", "Resilience", "Global Influence"]}
+          />
         </h2>
-        <p className="mt-4 text-gray-400">
-          From the inception of a project to its completion, we employ a
-          comprehensive and holistic approach.
+        <p className="mt-2 text-gray-400">
+          A professional actress, film producer, singer, and humanitarian. Best
+          Actress award at the 2010 Ghana Movie Awards.
         </p>
 
         {/* Buttons */}
-        <div className="mt-6 flex gap-4">
-          <button className="px-6 py-3 border border-white rounded-full font-semibold transition hover:bg-white hover:text-black">
-            Let&apos;s Contact
-          </button>
-        </div>
-
-        {/* Contact Info */}
       </div>
       <div className=" absolute z-10 left-32 bottom-20 mt-12 flex flex-wrap items-center gap-6">
-        <div>
-          Email: <p className="">Webfolio.Info@gmail.com</p>
-        </div>
+        <FiFacebook size={30} />
         <div className="w-[1] h-8 bg-white" />
-        <div>
-          Phone: <p className="">+2 456 (343) 24 45</p>
-        </div>
-        <div className="w-[1] h-8 bg-white" />
+        <FaInstagram size={30} />
 
-        <div>
-          Address: <p className="">5919 Trussville Pkwy, Birmingham</p>
-        </div>
+        <div className="w-[1] h-8 bg-white" />
+        <FaXTwitter size={30} />
+        <div className="w-[1] h-8 bg-white" />
+        <CiYoutube size={30} />
       </div>
     </section>
   );
