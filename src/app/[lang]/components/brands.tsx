@@ -47,7 +47,7 @@ const Brands = () => {
               alt={brand.name}
               width={100}
               height={100}
-              className="h-10 md:h-14"
+              className=""
             />
           ))}
         </motion.div>
