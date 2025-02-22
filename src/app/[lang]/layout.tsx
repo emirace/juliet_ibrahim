@@ -1,7 +1,7 @@
 import { getDictionary } from "@/get-dictionary";
 import { i18n, type Locale } from "../../i18n-config";
-import Footer from "./components/footer";
-import Navbar from "./components/navbar";
+import Footer from "./_components/footer";
+import Navbar from "./_components/navbar";
 import "./globals.css";
 
 import { Poppins, Plus_Jakarta_Sans } from "next/font/google";

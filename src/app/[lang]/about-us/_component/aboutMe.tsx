@@ -1,5 +1,6 @@
 import IMAGES from "@/assetes/images";
 import Image from "next/image";
+import Link from "next/link";
 
 const AboutMe = () => {
   return (
@@ -9,7 +10,7 @@ const AboutMe = () => {
         <div className="relative flex gap-8">
           <div className="w-1/2 mb-12">
             <Image
-              src={IMAGES.about}
+              src={IMAGES.image7}
               alt="Creative team working"
               width={500}
               height={600}
@@ -18,7 +19,7 @@ const AboutMe = () => {
           </div>
           <div className="w-1/2 mt-12">
             <Image
-              src={IMAGES.about}
+              src={IMAGES.image8}
               alt="Creative team working"
               width={500}
               height={600}
@@ -51,12 +52,12 @@ const AboutMe = () => {
 
           {/* Our Services Link */}
           <div className="mt-6">
-            <a
-              href="#"
+            <Link
+              href="/filmography"
               className="text-primary  font-medium hover:underline flex items-center"
             >
-              Our Services ↗
-            </a>
+              Filmography
+            </Link>
           </div>
         </div>
       </div>

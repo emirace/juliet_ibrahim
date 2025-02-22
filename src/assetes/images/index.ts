@@ -16,6 +16,13 @@ const IMAGES = {
   gulder: new URL("./gulder.png", import.meta.url).href,
   sheraton: new URL("./sheraton.jpg", import.meta.url).href,
   tecno_log: new URL("./tecno_log.webp", import.meta.url).href,
+  image4: new URL("./image4.JPG", import.meta.url).href,
+  image6: new URL("./image6.png", import.meta.url).href,
+  image7: new URL("./image7.JPG", import.meta.url).href,
+  image8: new URL("./image8.JPG", import.meta.url).href,
+  image9: new URL("./image9.JPG", import.meta.url).href,
+  image10: new URL("./image10.JPG", import.meta.url).href,
+  image11: new URL("./image11.jpg", import.meta.url).href,
 };
 
 export default IMAGES;

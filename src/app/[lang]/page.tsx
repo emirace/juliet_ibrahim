@@ -1,11 +1,11 @@
 import { getDictionary } from "../../get-dictionary";
 import { Locale } from "../../i18n-config";
-import AboutMe from "./components/aboutMe";
-import Book from "./components/book";
-import Brands from "./components/brands";
-import Filmography from "./components/filmography";
-import Hero from "./components/hero";
-import Services from "./components/services";
+import AboutMe from "./_components/aboutMe";
+import Book from "./_components/book";
+import Brands from "./_components/brands";
+import Filmography from "./_components/filmography";
+import Hero from "./_components/hero";
+import Services from "./_components/services";
 
 export default async function IndexPage(props: {
   params: Promise<{ lang: Locale }>;

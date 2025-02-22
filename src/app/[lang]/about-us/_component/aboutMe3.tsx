@@ -8,7 +8,7 @@ const AboutMe3 = () => {
         <div className="relative flex justify-center items-center ">
           <div className="relative -rotate-6">
             <Image
-              src={IMAGES.about}
+              src={IMAGES.image9}
               alt="Teamwork"
               width={180}
               height={140}
@@ -30,10 +30,10 @@ const AboutMe3 = () => {
             United Airlines.
           </p>
         </div>
-        <div className="relative flex justify-center items-center bg-red-500">
+        <div className="relative md:flex justify-center items-center bg-red-500 hidden">
           <div className="absolute  rotate-6">
             <Image
-              src={IMAGES.about}
+              src={IMAGES.image10}
               alt="Teamwork"
               width={180}
               height={140}
