@@ -1,6 +1,3 @@
-import IMAGES from "@/assetes/images";
-import Image from "next/image";
-
 const AboutMe2 = () => {
   return (
     <section className="relative bg-black text-white py-16 px-6 md:px-20">
