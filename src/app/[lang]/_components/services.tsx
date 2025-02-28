@@ -1,63 +1,70 @@
+import IMAGES from "@/assetes/images";
 import Image from "next/image";
+import Link from "next/link";
 
-const services = [
+const initiatives = [
   {
-    title: "Healthcare Support",
+    title: "STEAM Education",
     description:
-      "Providing essential medical services and support to underprivileged communities.",
-    image: "/healthcare-support.jpg", // Replace with actual image paths
+      "Providing young girls with access to quality education in Science, Technology, Engineering, Arts, and Mathematics (STEAM).",
+    image: IMAGES.image12,
   },
   {
-    title: "Educational Programs",
+    title: "Mentorship Programs",
     description:
-      "Empowering the youth through educational initiatives and scholarship programs.",
-    image: "/educational-programs.jpg",
+      "Connecting girls with industry leaders and professionals to guide them in their STEAM careers.",
+    image: IMAGES.image13,
   },
   {
-    title: "Disaster Relief",
+    title: "Innovation & Technology",
     description:
-      "Offering immediate assistance and resources to those affected by natural disasters.",
-    image: "/disaster-relief.jpg",
+      "Encouraging creativity and problem-solving through hands-on projects and technological advancements.",
+    image: IMAGES.image14,
   },
 ];
-
 export default function Services() {
   return (
-    <section className=" py-16 px-6 md:px-20">
-      <div className=" grid md:grid-cols-2 gap-12">
+    <section className="py-16 px-6 md:px-20">
+      <div className="grid md:grid-cols-2 gap-12">
         <div>
           <h4 className="text-orange-500 uppercase tracking-widest text-sm font-poppins">
             Juliet Ibrahim Foundation
           </h4>
           <h2 className="text-2xl md:text-5xl font-medium mt-4">
-            Our services are dedicated to improving lives and providing hope.
+            Empowering Girls, Shaping Futures, Transforming Communities through
+            STEAM.
           </h2>
           <p className="text-gray-400 mt-4">
-            Committed to humanitarian efforts, we strive to make a positive
-            impact through healthcare, education, and disaster relief.
+            Join us in bridging the gender gap in Science, Technology,
+            Engineering, Arts, and Mathematics (STEAM) across Africa. Together,
+            we can unlock potential, drive innovation, and create a brighter
+            future.
           </p>
-          <button className="mt-6 flex items-center text-white border border-white px-5 py-2 rounded-full hover:bg-white hover:text-black transition">
-            Learn more
-          </button>
+          <Link
+            href="https://www.hersteaminitiative.org/"
+            className="mt-6 flex items-center text-white border border-white px-5 py-2 rounded-full hover:bg-white hover:text-black transition"
+          >
+            Get Involved
+          </Link>
         </div>
         <div className="space-y-6">
-          {services.map((service, index) => (
+          {initiatives.map((initiative, index) => (
             <div
               key={index}
               className="flex items-center border border-white border-opacity-30 p-6 rounded-lg"
             >
               <div className="w-24 h-24 relative">
                 <Image
-                  src={service.image}
-                  alt={service.title}
+                  src={initiative.image}
+                  alt={initiative.title}
                   layout="fill"
                   objectFit="cover"
                   className="rounded-md"
                 />
               </div>
               <div className="ml-6">
-                <h3 className="text-xl font-semibold">{service.title}</h3>
-                <p className="text-gray-400 mt-2">{service.description}</p>
+                <h3 className="text-xl font-semibold">{initiative.title}</h3>
+                <p className="text-gray-400 mt-2">{initiative.description}</p>
               </div>
             </div>
           ))}

@@ -44,7 +44,7 @@ const Hero = () => {
         </h2>
         <p className="md:mt-2 text-gray-400">
           A professional actress, film producer, singer, and humanitarian. Best
-          Actress award at the 2010 Ghana Movie Awards.
+          Actress award at the 2010 Ghana Movie Awards, Best Director at Ghana Movie Awards 2024.
         </p>
 
         {/* Buttons */}
