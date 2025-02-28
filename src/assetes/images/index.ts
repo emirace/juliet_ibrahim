@@ -26,6 +26,10 @@ const IMAGES = {
   image12: new URL("./image12.jpg", import.meta.url).href,
   image13: new URL("./image13.jpg", import.meta.url).href,
   image14: new URL("./image14.jpg", import.meta.url).href,
+  image15: new URL("./image15.JPG", import.meta.url).href,
+  image16: new URL("./image16.JPG", import.meta.url).href,
+  image17: new URL("./image17.JPG", import.meta.url).href,
+  image18: new URL("./image18.JPG", import.meta.url).href,
 };
 
 export default IMAGES;

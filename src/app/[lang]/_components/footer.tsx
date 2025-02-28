@@ -1,8 +1,10 @@
-import { Facebook, Dribbble, Linkedin, Instagram, ArrowUp } from "lucide-react";
+import { Facebook, Instagram, ArrowUp } from "lucide-react";
 
 import Link from "next/link";
 import Image from "next/image";
 import IMAGES from "@/assetes/images";
+import { CiYoutube } from "react-icons/ci";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -12,11 +14,13 @@ export default function Footer() {
         <div>
           <Image src={IMAGES.logo} alt="Logo" width={180} height={180} />
 
-          <p className="text-gray-400 mt-4">
+          {/* <p className="text-gray-400 mt-4">
             5919 Trussville Crossings Pkwy, Birmingham
-          </p>
+          </p> */}
           <p className="mt-2 font-semibold">support@julietibrahim.net</p>
-          <p className="text-orange-500 mt-2 font-bold">+124 56 7879</p>
+          <p className="text-orange-500 mt-2 font-bold">
+            +233 267 065 858, +234 807 748 7580
+          </p>
         </div>
 
         {/* Useful Links */}
@@ -67,19 +71,19 @@ export default function Footer() {
               <Facebook className="w-5 h-5" />
             </Link>
             <Link
-              href="#"
+              href="https://x.com/julietibrahim?t=cgvX2VhlWl252ur0WznU9g&s=09"
               className="p-2 rounded-full border border-white border-opacity-30"
             >
-              <Dribbble className="w-5 h-5" />
+              <FaXTwitter className="w-5 h-5" />
             </Link>
             <Link
-              href="#"
+              href="https://www.youtube.com/@julietibrahimdiaries"
               className="p-2 rounded-full border border-white border-opacity-30"
             >
-              <Linkedin className="w-5 h-5" />
+              <CiYoutube className="w-5 h-5" />
             </Link>
             <Link
-              href="#"
+              href="https://www.instagram.com/julietibrahim?igsh=MW9wOHF2OWVhY200YQ=="
               className="p-2 rounded-full border border-white border-opacity-30"
             >
               <Instagram className="w-5 h-5" />
