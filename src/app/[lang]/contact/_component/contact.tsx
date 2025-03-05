@@ -10,17 +10,20 @@ const ContactForm = () => {
         {/* Left Side - Contact Info */}
         <div className="bg-[#111] p-8 rounded-lg shadow-md">
           <h2 className="text-primary text-2xl font-semibold mb-4">
-            +1234 567 890
+            Contact Us
           </h2>
 
           <div className="mb-6">
-            <h3 className="text-lg font-semibold">Address</h3>
-            <p className="text-gray-400">example address information</p>
+            <h3 className="text-lg font-semibold">Phone</h3>
+            <p className="text-gray-400">
+              {" "}
+              +233 267 065 858, +234 807 748 7580
+            </p>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold">Email</h3>
-            <p className="text-gray-400">Support@juietibrahim.net</p>
+            <p className="text-gray-400">info@juietibrahim.net</p>
           </div>
 
           {/* Social Icons */}

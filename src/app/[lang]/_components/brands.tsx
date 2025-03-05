@@ -11,6 +11,13 @@ const brands = [
   { name: "Theo", logo: IMAGES.boomplay },
   { name: "Rise", logo: IMAGES.gulder },
   { name: "Hitech", logo: IMAGES.lg_logo },
+  { name: "Glo", logo: IMAGES.glo },
+  { name: "Dana", logo: IMAGES.dana },
+  { name: "Marriott", logo: IMAGES.marriott },
+  { name: "Marrtini", logo: IMAGES.martini },
+  { name: "Moet", logo: IMAGES.moet },
+  { name: "satourism", logo: IMAGES.satourism },
+  { name: "United", logo: IMAGES.united },
 ];
 
 // Duplicate array for seamless looping effect
@@ -46,8 +53,8 @@ const Brands = () => {
               src={brand.logo}
               alt={brand.name}
               width={100}
-              height={100}
-              className=""
+              height={70}
+              className="bg-white object-contain"
             />
           ))}
         </motion.div>

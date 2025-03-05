@@ -42,18 +42,18 @@ export default function Services() {
           </p>
           <Link
             href="https://www.hersteaminitiative.org/"
-            className="mt-6 flex items-center text-white border border-white px-5 py-2 rounded-full hover:bg-white hover:text-black transition"
+            className="mt-6 inline-block text-white  border border-white px-5 py-2 rounded-full hover:bg-white hover:text-black transition"
           >
             Get Involved
           </Link>
         </div>
-        <div className="space-y-6">
+        <div className="space-y-6 w-full ">
           {initiatives.map((initiative, index) => (
             <div
               key={index}
               className="flex items-center border border-white border-opacity-30 p-6 rounded-lg"
             >
-              <div className="w-24 h-24 relative">
+              <div className="w-1/2 h-40 relative">
                 <Image
                   src={initiative.image}
                   alt={initiative.title}
@@ -62,7 +62,7 @@ export default function Services() {
                   className="rounded-md"
                 />
               </div>
-              <div className="ml-6">
+              <div className="ml-6 w-1/2">
                 <h3 className="text-xl font-semibold">{initiative.title}</h3>
                 <p className="text-gray-400 mt-2">{initiative.description}</p>
               </div>

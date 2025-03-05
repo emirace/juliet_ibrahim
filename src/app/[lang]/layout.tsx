@@ -19,7 +19,7 @@ const plus_jakarta_sans = Plus_Jakarta_Sans({
 });
 
 export const metadata = {
-  title: "Julient Ibrahim",
+  title: "Juliet Ibrahim",
   description: "Julient Ibrahim Portfolio",
 };
 

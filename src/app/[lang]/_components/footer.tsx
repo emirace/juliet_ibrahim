@@ -1,4 +1,4 @@
-import { Facebook, Instagram, ArrowUp } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -59,8 +59,8 @@ export default function Footer() {
               placeholder="Your Email"
               className="bg-transparent border-none focus:ring-0 text-white w-full placeholder-gray-400"
             />
-            <button className="text-gray-400 hover:text-white">
-              <ArrowUp />
+            <button className="text-gray-400 hover:text-black hover:bg-white border border-gray-400 rounded-full px-6 p-1">
+              Join
             </button>
           </div>
           <div className="flex space-x-4 mt-4">
