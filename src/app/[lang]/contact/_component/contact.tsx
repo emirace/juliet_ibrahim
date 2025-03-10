@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import { CiYoutube } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
