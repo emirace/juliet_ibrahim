@@ -13,10 +13,21 @@ export default function Footer() {
   const [sent, setSent] = useState(false);
   const [input, setInput] = useState("");
 
-  const handleSubmit = () => {
-    setInput("");
-    setSent(true);
+  const subscribeToNewsletter = async () => {
+    try {
+      await fetch("/api/newsletters", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: input }),
+      });
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setInput("");
+      setSent(true);
+    }
   };
+
   return (
     <footer className="bg-black text-white py-10 pt-20 px-6 md:px-20">
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
@@ -76,7 +87,7 @@ export default function Footer() {
               <FaCheck className="text-lg" />
             ) : (
               <button
-                onClick={handleSubmit}
+                onClick={subscribeToNewsletter}
                 className="text-gray-400 hover:text-black hover:bg-white border border-gray-400 rounded-full px-6 p-1"
               >
                 Send
