@@ -3,6 +3,7 @@ import React from "react";
 import ReactPlayer from "react-player/youtube";
 
 const videos = [
+  { id: 3, url: "https://youtu.be/TJlhqPY8kEM" },
   { id: 1, url: "https://youtu.be/UncLikIMfKI" },
   { id: 2, url: "https://youtu.be/3CDqcMoadaE" },
 ];
@@ -26,7 +27,7 @@ const Filmography = () => {
       </div>
 
       {/* Grid Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2  gap-6 mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-3  gap-6 mt-12">
         {videos.map((video) => (
           <div
             key={video.id}

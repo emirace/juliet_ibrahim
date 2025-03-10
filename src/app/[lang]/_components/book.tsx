@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import IMAGES from "@/assetes/images";
+import Link from "next/link";
 
 const Book = () => {
   return (
@@ -45,12 +46,12 @@ const Book = () => {
                 Juliet Ibrahim shares her personal experiences and life lessons
                 in her book, &quot;A Toast to Life.&quot;
               </p>
-              <a
-                href="#"
+              <Link
+                href="/shop"
                 className="inline-block mt-12 text-primary transition duration-300"
               >
                 Learn More About the Book →
-              </a>
+              </Link>
             </div>
           </div>
 

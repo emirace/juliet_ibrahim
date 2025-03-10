@@ -63,7 +63,7 @@ const Brands = () => {
       {/* Footer Text */}
       <div className="mt-12 text-center">
         <p className="inline-block border border-white border-opacity-30 px-6 py-2 rounded-full text-sm font-medium">
-          More than <span className="font-bold">200+</span> companies trusted us
+          More than <span className="font-bold">100+</span> companies trusted us
           worldwide
         </p>
       </div>

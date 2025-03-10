@@ -1,3 +1,4 @@
+"use client";
 import { Facebook, Instagram } from "lucide-react";
 
 import Link from "next/link";
@@ -5,8 +6,17 @@ import Image from "next/image";
 import IMAGES from "@/assetes/images";
 import { CiYoutube } from "react-icons/ci";
 import { FaXTwitter } from "react-icons/fa6";
+import { useState } from "react";
+import { FaCheck } from "react-icons/fa";
 
 export default function Footer() {
+  const [sent, setSent] = useState(false);
+  const [input, setInput] = useState("");
+
+  const handleSubmit = () => {
+    setInput("");
+    setSent(true);
+  };
   return (
     <footer className="bg-black text-white py-10 pt-20 px-6 md:px-20">
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
@@ -57,11 +67,21 @@ export default function Footer() {
             <input
               type="email"
               placeholder="Your Email"
-              className="bg-transparent border-none focus:ring-0 text-white w-full placeholder-gray-400"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              disabled={sent}
+              className="bg-transparent border-none focus:ring-0 focus:outline-none text-white w-full placeholder-gray-400"
             />
-            <button className="text-gray-400 hover:text-black hover:bg-white border border-gray-400 rounded-full px-6 p-1">
-              Join
-            </button>
+            {sent ? (
+              <FaCheck className="text-lg" />
+            ) : (
+              <button
+                onClick={handleSubmit}
+                className="text-gray-400 hover:text-black hover:bg-white border border-gray-400 rounded-full px-6 p-1"
+              >
+                Send
+              </button>
+            )}
           </div>
           <div className="flex space-x-4 mt-4">
             <Link
