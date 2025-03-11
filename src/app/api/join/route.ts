@@ -8,7 +8,8 @@ export async function POST(req: NextRequest) {
     const email = formData.get("email");
     const subject = formData.get("subject");
     const caseDescription = formData.get("message");
-    const cvFile = formData.get("file");
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const cvFile = formData.get("file") as any;
 
     if (!fullName || !email || !subject || !caseDescription) {
       return new Response(
