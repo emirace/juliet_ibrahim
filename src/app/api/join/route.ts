@@ -3,8 +3,12 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
   try {
-    const { fullName, email, subject, caseDescription, cvFile } =
-      await req.json();
+    const formData = await req.formData();
+    const fullName = formData.get("name");
+    const email = formData.get("email");
+    const subject = formData.get("subject");
+    const caseDescription = formData.get("message");
+    const cvFile = formData.get("file");
 
     if (!fullName || !email || !subject || !caseDescription) {
       return new Response(
@@ -18,13 +22,13 @@ export async function POST(req: NextRequest) {
 
     const transporter = nodemailer.createTransport({
       host: process.env.SERVICE,
+      port: parseInt(process.env.PORT || "465", 10),
       secure: true,
-      secureConnection: false,
+      //   secureConnection: false,
       tls: {
         ciphers: "SSLv3",
       },
       requireTLS: true,
-      port: process.env.PORT,
       debug: true,
       auth: {
         user: process.env.EMAIL_USER, // Your email address
