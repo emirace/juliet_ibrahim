@@ -65,6 +65,22 @@ function Booking() {
     (category) => category.name === formData.category
   )?.services;
 
+  const handleSubmit = async (client: {
+    name: string;
+    email: string;
+    phone: string;
+  }) => {
+    try {
+      await fetch("/api/booking", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...formData, ...client }),
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const renderItem = () => {
     switch (step) {
       case "category":
@@ -85,7 +101,12 @@ function Booking() {
           />
         );
       case "info":
-        return <ClientInfoForm previous={() => setStep("calendar")} />;
+        return (
+          <ClientInfoForm
+            previous={() => setStep("calendar")}
+            handleSubmit={handleSubmit}
+          />
+        );
 
       default:
         break;

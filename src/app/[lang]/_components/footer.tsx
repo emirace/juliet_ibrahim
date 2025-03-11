@@ -1,4 +1,5 @@
 "use client";
+
 import { Facebook, Instagram } from "lucide-react";
 
 import Link from "next/link";
@@ -12,9 +13,11 @@ import { FaCheck } from "react-icons/fa";
 export default function Footer() {
   const [sent, setSent] = useState(false);
   const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const subscribeToNewsletter = async () => {
     try {
+      setLoading(true);
       await fetch("/api/newsletters", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -25,6 +28,7 @@ export default function Footer() {
     } finally {
       setInput("");
       setSent(true);
+      setLoading(false);
     }
   };
 
@@ -38,7 +42,7 @@ export default function Footer() {
           {/* <p className="text-gray-400 mt-4">
             5919 Trussville Crossings Pkwy, Birmingham
           </p> */}
-          <p className="mt-2 font-semibold">support@julietibrahim.net</p>
+          <p className="mt-2 font-semibold">info@julietibrahim.net</p>
           <p className="text-orange-500 mt-2 font-bold">
             +233 267 065 858, +234 807 748 7580
           </p>
@@ -90,7 +94,7 @@ export default function Footer() {
                 onClick={subscribeToNewsletter}
                 className="text-gray-400 hover:text-black hover:bg-white border border-gray-400 rounded-full px-6 p-1"
               >
-                Send
+                {loading ? "Sending" : "Send"}
               </button>
             )}
           </div>

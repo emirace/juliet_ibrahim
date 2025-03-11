@@ -58,7 +58,7 @@ const Book = () => {
           {/* Bottom Stats */}
           <div className="mt-12 flex justify-center md:justify-around border-t w-full border-white border-opacity-20 py-6 items-center text-center md:text-left gap-6">
             <div className="text-3xl font-bold text-center">
-              5<p className="text-sm text-gray-400">CHAPTERS</p>
+              10+<p className="text-sm text-gray-400">CHAPTERS</p>
             </div>
 
             <div className="text-3xl font-bold text-center">

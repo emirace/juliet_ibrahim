@@ -18,17 +18,25 @@ export async function POST(request: NextRequest) {
 
     // Configure email transporter
     const transporter = nodemailer.createTransport({
-      service: "gmail", // Can be SendGrid, Mailgun, etc.
+      host: process.env.SERVICE,
+      secure: true,
+      secureConnection: false,
+      tls: {
+        ciphers: "SSLv3",
+      },
+      requireTLS: true,
+      port: process.env.PORT,
+      debug: true,
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        user: process.env.EMAIL_USER, // Your email address
+        pass: process.env.EMAIL_PASS, // Your email password or app-specific password
       },
     });
 
     // Send email
     await transporter.sendMail({
       from: `"Contact Form" <${process.env.EMAIL_USER}>`,
-      to: process.env.CONTACT_RECEIVER, // Admin/Support email
+      to: process.env.RECEIVER, // Admin/Support email
       subject: `New Contact Us Message: ${subject}`,
       html: contactTemplate(name, email, subject, message),
     });

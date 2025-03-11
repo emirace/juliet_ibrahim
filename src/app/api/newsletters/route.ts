@@ -14,13 +14,21 @@ export async function POST(request: NextRequest) {
 
     // Configure email transporter
     const transporter = nodemailer.createTransport({
-      service: "gmail", // You can replace this with SendGrid, Mailgun, etc.
+      host: process.env.SERVICE,
+      secure: true,
+      secureConnection: false,
+      tls: {
+        ciphers: "SSLv3",
+      },
+      requireTLS: true,
+      port: process.env.PORT,
+      debug: true,
       auth: {
         user: process.env.EMAIL_USER, // Your email address
         pass: process.env.EMAIL_PASS, // Your email password or app-specific password
       },
     });
-
+    console.log(process.env.EMAIL_USER, process.env.EMAIL_PASS, email);
     // Send email
     await transporter.sendMail({
       from: `"Your Newsletter" <${process.env.EMAIL_USER}>`,

@@ -2,19 +2,47 @@
 
 import React, { useState } from "react";
 
-const ClientInfoForm: React.FC<{ previous: () => void }> = ({ previous }) => {
+interface Props {
+  previous: () => void;
+  handleSubmit: (client: {
+    name: string;
+    email: string;
+    phone: string;
+  }) => void;
+}
+
+const ClientInfoForm: React.FC<Props> = ({ previous, handleSubmit }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    // Handle form submission logic here
-    console.log("Client Info:", { name, email, phone });
+  const submit = async (event: React.FormEvent) => {
+    try {
+      event.preventDefault();
+      setLoading(true);
+      await handleSubmit({ name, email, phone });
+      setSubmitted(true);
+    } catch (error) {
+      console.log(error);
+      setError("An error occurred. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
-  return (
-    <form onSubmit={handleSubmit} className="px-4">
+  return submitted ? (
+    <div className="text-center">
+      <h2 className="text-3xl font-bold">Thank You!</h2>
+      <p className="text-gray-400 mt-2">
+        Your information has been successfully submitted. We will get in touch
+        with you soon.
+      </p>
+    </div>
+  ) : (
+    <form onSubmit={submit} className="px-4">
       <div className="mb-6">
         <h2 className="text-3xl font-bold">Client Information</h2>
         <p className="text-gray-400 mt-2">
@@ -69,12 +97,14 @@ const ClientInfoForm: React.FC<{ previous: () => void }> = ({ previous }) => {
           Back
         </button>
         <button
-          // type="submit"
+          type="submit"
+          disabled={loading}
           className="w-full px-4 py-2 bg-primary text-white font-medium rounded-md shadow-sm hover:bg-opacity-70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
         >
-          Submit
+          {loading ? "Loading..." : "Submit"}
         </button>
       </div>
+      {error && <div className="text-red-500 text-center">{error}</div>}
     </form>
   );
 };
