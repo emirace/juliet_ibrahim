@@ -43,9 +43,10 @@ export default function Footer() {
             5919 Trussville Crossings Pkwy, Birmingham
           </p> */}
           <p className="mt-2 font-semibold">info@julietibrahim.net</p>
-          <p className="text-orange-500 mt-2 font-bold">
-            +233 267 065 858, +234 807 748 7580
-          </p>
+          <p className="text-orange-500 mt-2 font-bold">+233 267 065 858</p>
+          <p className="text-orange-500 mt-2 font-bold">+234 807 748 7580</p>
+          <p className="text-orange-500 mt-2 font-bold">+1 (437) 860-7008</p>
+          <p className="text-orange-500 mt-2 font-bold">+1817 381 5340</p>
         </div>
 
         {/* Useful Links */}

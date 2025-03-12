@@ -25,7 +25,7 @@ const AboutMe = () => {
               className="object-cover w-full h-full"
             />
           </div>
-          <div className="w-1/2 mt-12">
+          <div className="w-1/2 mt-12 z-20">
             <Image
               src={IMAGES.image8}
               alt="Creative team working"
