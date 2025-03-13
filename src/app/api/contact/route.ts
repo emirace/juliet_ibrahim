@@ -1,5 +1,5 @@
+import { sendEmail } from "@/utils/sendEmail";
 import { NextRequest } from "next/server";
-import nodemailer from "nodemailer";
 
 export async function POST(request: NextRequest) {
   try {
@@ -16,26 +16,10 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Configure email transporter
-    const transporter = nodemailer.createTransport({
-      host: process.env.SERVICE,
-      port: parseInt(process.env.PORT || "465", 10),
-      secure: true,
-      tls: {
-        ciphers: "SSLv3",
-      },
-      requireTLS: true,
-      debug: true,
-      auth: {
-        user: process.env.EMAIL_USER, // Your email address
-        pass: process.env.EMAIL_PASS, // Your email password or app-specific password
-      },
-    });
-
     // Send email
-    await transporter.sendMail({
+    await sendEmail({
       from: `"Contact Form" <${process.env.EMAIL_USER}>`,
-      to: process.env.RECEIVER, // Admin/Support email
+      to: process.env.RECEIVER!,
       subject: `New Contact Us Message: ${subject}`,
       html: contactTemplate(name, email, subject, message),
     });

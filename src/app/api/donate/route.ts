@@ -1,12 +1,12 @@
+import { sendEmail2 } from "@/utils/sendEmail";
 import { NextRequest } from "next/server";
-import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
   try {
-    const { fullName, email, subject, caseDescription, cvFile } =
+    const { amount, firstName, lastName, email, address, message } =
       await req.json();
 
-    if (!fullName || !email || !subject || !caseDescription) {
+    if (!amount || !email || !firstName || !message) {
       return new Response(
         JSON.stringify({ error: "All fields are required" }),
         {
@@ -16,39 +16,14 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const transporter = nodemailer.createTransport({
-      host: process.env.SERVICE,
-      secure: true,
-      port: parseInt(process.env.PORT || "465", 10),
-      // secureConnection: false,
-      tls: {
-        ciphers: "SSLv3",
-      },
-      requireTLS: true,
-      debug: true,
-      auth: {
-        user: process.env.EMAIL_USER, // Your email address
-        pass: process.env.EMAIL_PASS, // Your email password or app-specific password
-      },
-    });
-
     const mailOptions = {
-      from: process.env.EMAIL_USERNAME,
-      to: process.env.RECEIVER,
-      subject: `Donation - ${subject}`,
-      text: `Name: ${fullName}\nEmail: ${email}\n\nMessage:\n${caseDescription}`,
-      attachments: cvFile
-        ? [
-            {
-              filename: cvFile.filename,
-              content: cvFile.content,
-              encoding: "base64",
-            },
-          ]
-        : [],
+      from: `"Her STEAM" <${process.env.STEAM_EMAIL_USER}>`,
+      to: process.env.STEAM_EMAIL_USER!,
+      subject: `Donation - ${firstName} ${lastName}`,
+      text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nAddress: ${address}\nAmount: ${amount}\n\nMessage:\n${message}`,
     };
 
-    await transporter.sendMail(mailOptions);
+    await sendEmail2(mailOptions);
 
     return new Response(
       JSON.stringify({ message: "Your request has been sent successfully!" }),

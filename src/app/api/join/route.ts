@@ -1,5 +1,5 @@
+import { sendEmail2 } from "@/utils/sendEmail";
 import { NextRequest } from "next/server";
-import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
   try {
@@ -16,30 +16,17 @@ export async function POST(req: NextRequest) {
         JSON.stringify({ error: "All fields are required" }),
         {
           status: 400,
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
         }
       );
     }
 
-    const transporter = nodemailer.createTransport({
-      host: process.env.SERVICE,
-      port: parseInt(process.env.PORT || "465", 10),
-      secure: true,
-      //   secureConnection: false,
-      tls: {
-        ciphers: "SSLv3",
-      },
-      requireTLS: true,
-      debug: true,
-      auth: {
-        user: process.env.EMAIL_USER, // Your email address
-        pass: process.env.EMAIL_PASS, // Your email password or app-specific password
-      },
-    });
-
     const mailOptions = {
-      from: process.env.EMAIL_USERNAME,
-      to: process.env.RECEIVER,
+      from: `"Her STEAM" <${process.env.STEAM_EMAIL_USER}>`,
+      to: process.env.STEAM_EMAIL_USER!,
       subject: `Join Movement - ${subject}`,
       text: `Name: ${fullName}\nEmail: ${email}\n\nMessage:\n${caseDescription}`,
       attachments: cvFile
@@ -53,20 +40,26 @@ export async function POST(req: NextRequest) {
         : [],
     };
 
-    await transporter.sendMail(mailOptions);
+    await sendEmail2(mailOptions);
 
     return new Response(
       JSON.stringify({ message: "Your request has been sent successfully!" }),
       {
         status: 200,
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
       }
     );
   } catch (error) {
     console.error("Error sending email:", error);
     return new Response(JSON.stringify({ error: "Internal Server Error" }), {
       status: 500,
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
     });
   }
 }

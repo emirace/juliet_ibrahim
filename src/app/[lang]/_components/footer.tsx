@@ -26,8 +26,8 @@ export default function Footer() {
     } catch (error) {
       console.log(error);
     } finally {
-      setInput("");
-      setSent(true);
+      // setInput("");
+      // setSent(true);
       setLoading(false);
     }
   };

@@ -1,5 +1,5 @@
+import { sendEmail } from "@/utils/sendEmail";
 import { NextRequest } from "next/server";
-import nodemailer from "nodemailer";
 
 export async function POST(request: NextRequest) {
   try {
@@ -12,29 +12,11 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    // Configure email transporter
-    const transporter = nodemailer.createTransport({
-      host: process.env.SERVICE,
-      port: parseInt(process.env.PORT || "465", 10),
-      secure: true,
-      // secureConnection: false,
-      tls: {
-        ciphers: "SSLv3",
-      },
-      requireTLS: true,
-      debug: true,
-      auth: {
-        user: process.env.EMAIL_USER, // Your email address
-        pass: process.env.EMAIL_PASS, // Your email password or app-specific password
-      },
-    });
-    console.log(process.env.EMAIL_USER, process.env.EMAIL_PASS, email);
-    // Send email
-    await transporter.sendMail({
-      from: `"Your Newsletter" <${process.env.EMAIL_USER}>`,
+    await sendEmail({
+      from: `"Juliet Newsletter" <${process.env.EMAIL_USER}>`,
       to: email,
       subject: "Welcome to Our Newsletter!",
-      html: newsletterTemplate(email),
+      html: `${newsletterTemplate(email)}`,
     });
 
     return new Response(
