@@ -18,6 +18,7 @@ const brands = [
   { name: "Moet", logo: IMAGES.moet },
   { name: "satourism", logo: IMAGES.satourism },
   { name: "United", logo: IMAGES.united },
+  { name: "Dubai", logo: IMAGES.dubai },
 ];
 
 // Duplicate array for seamless looping effect

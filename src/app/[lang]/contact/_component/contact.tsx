@@ -76,12 +76,41 @@ const ContactForm = () => {
 
           <div className="mb-6">
             <h3 className="text-lg font-semibold">Phone</h3>
-            <p className="text-gray-400">+233 267 065 858, +234 807 748 7580</p>
+
+            <a
+              href="tel:+233267065858"
+              className="text-orange-500 mt-2 font-bold block"
+            >
+              +233 267 065 858
+            </a>
+            <a
+              href="tel:+2348077487580"
+              className="text-orange-500 mt-2 font-bold block"
+            >
+              +234 807 748 7580
+            </a>
+            <a
+              href="tel:+14378607008"
+              className="text-orange-500 mt-2 font-bold block"
+            >
+              +1 (437) 860 7008
+            </a>
+            <a
+              href="tel:+18173815340"
+              className="text-orange-500 mt-2 font-bold block"
+            >
+              +1817 381 5340
+            </a>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold">Email</h3>
-            <p className="text-gray-400">info@juietibrahim.net</p>
+            <a
+              href="mailto:contact@julietibrahim.com"
+              className="mt-2 font-semibold text-orange-500 hover:underline"
+            >
+              contact@julietibrahim.com
+            </a>
           </div>
 
           {/* Social Icons */}
@@ -146,7 +175,7 @@ const ContactForm = () => {
               disabled={loading}
               className="w-full bg-transparent border border-white text-white py-3 rounded-full hover:bg-primary transition duration-300 disabled:opacity-50"
             >
-              {loading ? "Sending..." : "Let&apos;s Talk"}
+              {loading ? "Sending..." : `Let's Talk`}
             </button>
           </form>
         </div>

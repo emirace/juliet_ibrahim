@@ -74,8 +74,8 @@ const Book = () => {
             src={IMAGES.book3}
             alt="Discussion"
             layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
+            objectFit="contain"
+            className="rounded-lg "
           />
         </div>
       </div>

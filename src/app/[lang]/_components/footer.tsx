@@ -1,14 +1,12 @@
 "use client";
-
-import { Facebook, Instagram } from "lucide-react";
-
-import Link from "next/link";
 import Image from "next/image";
 import IMAGES from "@/assetes/images";
 import { CiYoutube } from "react-icons/ci";
 import { FaXTwitter } from "react-icons/fa6";
 import { useState } from "react";
-import { FaCheck } from "react-icons/fa";
+import { FaCheck, FaInstagram, FaPinterest } from "react-icons/fa";
+import { FiFacebook } from "react-icons/fi";
+import Link from "next/link";
 
 export default function Footer() {
   const [sent, setSent] = useState(false);
@@ -42,11 +40,36 @@ export default function Footer() {
           {/* <p className="text-gray-400 mt-4">
             5919 Trussville Crossings Pkwy, Birmingham
           </p> */}
-          <p className="mt-2 font-semibold">info@julietibrahim.net</p>
-          <p className="text-orange-500 mt-2 font-bold">+233 267 065 858</p>
-          <p className="text-orange-500 mt-2 font-bold">+234 807 748 7580</p>
-          <p className="text-orange-500 mt-2 font-bold">+1 (437) 860-7008</p>
-          <p className="text-orange-500 mt-2 font-bold">+1817 381 5340</p>
+          <a
+            href="mailto:contact@julietibrahim.com"
+            className="mt-2 font-semibold text-orange-500 hover:underline"
+          >
+            contact@julietibrahim.com
+          </a>
+          <a
+            href="tel:+233267065858"
+            className="text-orange-500 mt-2 font-bold block"
+          >
+            +233 267 065 858
+          </a>
+          <a
+            href="tel:+2348077487580"
+            className="text-orange-500 mt-2 font-bold block"
+          >
+            +234 807 748 7580
+          </a>
+          <a
+            href="tel:+14378607008"
+            className="text-orange-500 mt-2 font-bold block"
+          >
+            +1 (437) 860 7008
+          </a>
+          <a
+            href="tel:+18173815340"
+            className="text-orange-500 mt-2 font-bold block"
+          >
+            +1817 381 5340
+          </a>
         </div>
 
         {/* Useful Links */}
@@ -54,12 +77,12 @@ export default function Footer() {
           <h3 className="text-lg font-semibold">Useful Links</h3>
           <ul className="mt-4 space-y-2 text-gray-400">
             <li>
-              <a href="#" className="hover:text-white">
+              <Link href="/about_us" className="hover:text-white">
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
+              <a href="services" className="hover:text-white">
                 Services
               </a>
             </li>
@@ -69,9 +92,9 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
+              <Link href="/contact" className="hover:text-white">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -100,30 +123,41 @@ export default function Footer() {
             )}
           </div>
           <div className="flex space-x-4 mt-4">
-            <Link
-              href="#"
+            <a
+              href="https://www.facebook.com/share/1NtK3tSdk4/?mibextid=wwXIfr"
               className="p-2 rounded-full border border-white border-opacity-30"
+              target="_blank"
             >
-              <Facebook className="w-5 h-5" />
-            </Link>
-            <Link
+              <FiFacebook className="w-5 h-5" />
+            </a>
+            <a
               href="https://x.com/julietibrahim?t=cgvX2VhlWl252ur0WznU9g&s=09"
               className="p-2 rounded-full border border-white border-opacity-30"
+              target="_blank"
             >
               <FaXTwitter className="w-5 h-5" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="https://www.youtube.com/@julietibrahimdiaries"
               className="p-2 rounded-full border border-white border-opacity-30"
+              target="_blank"
             >
               <CiYoutube className="w-5 h-5" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="https://www.instagram.com/julietibrahim?igsh=MW9wOHF2OWVhY200YQ=="
               className="p-2 rounded-full border border-white border-opacity-30"
+              target="_blank"
             >
-              <Instagram className="w-5 h-5" />
-            </Link>
+              <FaInstagram className="w-5 h-5" />
+            </a>
+            <a
+              href="https://pin.it/27DjTlWVZ"
+              className="p-2 rounded-full border border-white border-opacity-30"
+              target="_blank"
+            >
+              <FaPinterest size={30} />
+            </a>
           </div>
         </div>
       </div>

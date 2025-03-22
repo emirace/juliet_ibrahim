@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 import ReactPlayer from "react-player/youtube";
 
@@ -21,9 +22,12 @@ const Filmography = () => {
             <span className="font-bold">SELECTED</span> WORKS.
           </div>
         </div>
-        <button className="hidden md:block px-8 py-2 border border-white rounded-full font-semibold transition hover:bg-white hover:text-black">
+        <Link
+          href="/filmography"
+          className="hidden md:block px-8 py-2 border border-white rounded-full font-semibold transition hover:bg-white hover:text-black"
+        >
           VIEW ALL
-        </button>
+        </Link>
       </div>
 
       {/* Grid Section */}
@@ -36,7 +40,7 @@ const Filmography = () => {
             {/* Video Preview */}
             <ReactPlayer
               url={video.url}
-              //   width="100%"
+              width="100%"
               //   height="200px"
               //   controls
               //   light // Shows thumbnail preview

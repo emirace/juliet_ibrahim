@@ -27,7 +27,7 @@ export default function Services() {
     <section className="py-16 px-6 md:px-20">
       <div className="grid md:grid-cols-2 gap-12">
         <div>
-          <h4 className="text-orange-500 uppercase tracking-widest text-sm font-poppins">
+          <h4 className="text-orange-500 uppercase tracking-widest text-lg font-semibold font-poppins">
             Juliet Ibrahim Foundation
           </h4>
           <h2 className="text-2xl md:text-5xl font-medium mt-4">

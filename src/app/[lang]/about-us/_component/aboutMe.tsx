@@ -8,15 +8,14 @@ const AboutMe = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Image Section */}
         <div className="relative flex gap-8">
-          {" "}
-          <Image
+          {/* <Image
             src={IMAGES.logo}
             alt="Logo"
             width={300}
             height={300}
             className="absolute bottom-0 left-0"
-          />
-          <div className="w-1/2 mb-12 z-20">
+          /> */}
+          <div className="w-1/2  z-20">
             <Image
               src={IMAGES.image7}
               alt="Creative team working"
@@ -25,7 +24,7 @@ const AboutMe = () => {
               className="object-cover w-full h-full"
             />
           </div>
-          <div className="w-1/2 mt-12 z-20">
+          <div className="w-1/2  z-20">
             <Image
               src={IMAGES.image8}
               alt="Creative team working"
