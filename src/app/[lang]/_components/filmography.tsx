@@ -49,9 +49,12 @@ const Filmography = () => {
         ))}
       </div>
       <div className="flex justify-center mt-12">
-        <button className="md:hidden  px-8 py-2 border border-white rounded-full font-semibold transition hover:bg-white hover:text-black">
+        <Link
+          href="/filmography"
+          className="md:hidden  px-8 py-2 border border-white rounded-full font-semibold transition hover:bg-white hover:text-black"
+        >
           VIEW ALL
-        </button>
+        </Link>
       </div>
     </div>
   );
