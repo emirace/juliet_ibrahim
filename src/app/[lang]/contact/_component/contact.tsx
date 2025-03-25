@@ -84,10 +84,10 @@ const ContactForm = () => {
               +233 267 065 858
             </a>
             <a
-              href="tel:+2348077487580"
+              href="tel:+2348157729057"
               className="text-orange-500 mt-2 font-bold block"
             >
-              +234 807 748 7580
+              +234 815 772 9057
             </a>
             <a
               href="tel:+14378607008"

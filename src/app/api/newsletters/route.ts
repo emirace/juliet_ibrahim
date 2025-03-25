@@ -17,6 +17,7 @@ export async function POST(request: NextRequest) {
       to: email,
       subject: "Welcome to Our Newsletter!",
       html: `${newsletterTemplate(email)}`,
+      multiple: false,
     });
 
     return new Response(
