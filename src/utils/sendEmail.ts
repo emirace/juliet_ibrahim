@@ -40,6 +40,7 @@ export const sendEmail = async ({
     subject,
     html,
   });
+  console.log("Email sent successfully");
 };
 
 export const sendEmail2 = async ({
@@ -58,13 +59,22 @@ export const sendEmail2 = async ({
   attachments?: { filename: string; content: Buffer }[];
 }) => {
   const transporter = nodemailer.createTransport(smtpConfig2);
-  const mailTo = [to, "julietibrahim@gmail.com"];
-  await transporter.sendMail({
-    from,
-    to: mailTo,
-    subject,
-    html,
-    text,
-    attachments,
-  });
+  const mailTo = [
+    to,
+    "hersteaminitiative@gmail.com",
+    "emmanuelakwuba57@gmail.com",
+  ];
+  try {
+    await transporter.sendMail({
+      from,
+      to: mailTo,
+      subject,
+      html,
+      text,
+      attachments,
+    });
+    console.log("Email sent successfully");
+  } catch (error) {
+    console.log(error);
+  }
 };

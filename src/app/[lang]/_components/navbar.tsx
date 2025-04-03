@@ -9,10 +9,10 @@ import { useState } from "react";
 
 const navLinks = [
   { name: "HOME", href: "/" },
-  { name: "ABOUT US", href: "/about-us" },
+  { name: "ABOUT ME", href: "/about-us" },
   { name: "FILMOGRAPHY", href: "/filmography" },
   { name: "SHOP", href: "/shop" },
-  { name: "CONTACT US", href: "/contact" },
+  { name: "CONTACT", href: "/contact" },
 ];
 
 const Navbar = ({

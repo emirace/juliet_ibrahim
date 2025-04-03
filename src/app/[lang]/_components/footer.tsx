@@ -50,25 +50,25 @@ export default function Footer() {
             href="tel:+233267065858"
             className="text-orange-500 mt-2 font-bold block"
           >
-            +233 267 065 858
+            Ghana: +233 267 065 858
           </a>
           <a
             href="tel:+2348157729057"
             className="text-orange-500 mt-2 font-bold block"
           >
-            +234 815 772 9057
+            Nigeria: +234 815 772 9057
           </a>
           <a
             href="tel:+14378607008"
             className="text-orange-500 mt-2 font-bold block"
           >
-            +1 (437) 860 7008
+            Canada: +1437 860 7008
           </a>
           <a
             href="tel:+18173815340"
             className="text-orange-500 mt-2 font-bold block"
           >
-            +1817 381 5340
+            USA: +1817 381 5340
           </a>
         </div>
 
