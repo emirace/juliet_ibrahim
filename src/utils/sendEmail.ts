@@ -59,11 +59,7 @@ export const sendEmail2 = async ({
   attachments?: { filename: string; content: Buffer }[];
 }) => {
   const transporter = nodemailer.createTransport(smtpConfig2);
-  const mailTo = [
-    to,
-    "hersteaminitiative@gmail.com",
-    "emmanuelakwuba57@gmail.com",
-  ];
+  const mailTo = [to, "hersteaminitiative@gmail.com"];
   try {
     await transporter.sendMail({
       from,
