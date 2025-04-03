@@ -77,18 +77,18 @@ export default function Footer() {
           <h3 className="text-lg font-semibold">Useful Links</h3>
           <ul className="mt-4 space-y-2 text-gray-400">
             <li>
-              <Link href="/about_us" className="hover:text-white">
+              <Link href="/about-us" className="hover:text-white">
                 About
               </Link>
             </li>
             <li>
-              <a href="services" className="hover:text-white">
-                Services
+              <a href="/filmography" className="hover:text-white">
+                Filmography
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
-                Blog
+              <a href="/shop" className="hover:text-white">
+                Shop
               </a>
             </li>
             <li>

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { CiYoutube } from "react-icons/ci";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaPinterest } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiFacebook } from "react-icons/fi";
 
@@ -114,11 +114,43 @@ const ContactForm = () => {
           </div>
 
           {/* Social Icons */}
+
           <div className="flex space-x-4 mt-6">
-            <FiFacebook className="text-gray-400 hover:text-white transition duration-300 cursor-pointer text-lg" />
-            <FaInstagram className="text-gray-400 hover:text-white transition duration-300 cursor-pointer text-lg" />
-            <FaXTwitter className="text-gray-400 hover:text-white transition duration-300 cursor-pointer text-lg" />
-            <CiYoutube className="text-gray-400 hover:text-white transition duration-300 cursor-pointer text-lg" />
+            <a
+              href="https://www.facebook.com/share/1NtK3tSdk4/?mibextid=wwXIfr"
+              className="text-lg text-gray-400"
+              target="_blank"
+            >
+              <FiFacebook />
+            </a>
+            <a
+              href="https://x.com/julietibrahim?t=cgvX2VhlWl252ur0WznU9g&s=09"
+              className="text-lg text-gray-400"
+              target="_blank"
+            >
+              <FaXTwitter />
+            </a>
+            <a
+              href="https://www.youtube.com/@julietibrahimdiaries"
+              className="text-lg text-gray-400"
+              target="_blank"
+            >
+              <CiYoutube />
+            </a>
+            <a
+              href="https://www.instagram.com/julietibrahim?igsh=MW9wOHF2OWVhY200YQ=="
+              className="text-lg text-gray-400"
+              target="_blank"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://pin.it/27DjTlWVZ"
+              className="text-lg text-gray-400"
+              target="_blank"
+            >
+              <FaPinterest />
+            </a>
           </div>
         </div>
 
