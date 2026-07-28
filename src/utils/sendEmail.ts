@@ -50,6 +50,9 @@ export const sendEmail2 = async ({
   subject,
   attachments,
   text,
+  replyTo,
+  multiple = true,
+  throwOnError = false,
 }: {
   to: string;
   from: string;
@@ -57,9 +60,16 @@ export const sendEmail2 = async ({
   html?: string;
   text?: string;
   attachments?: { filename: string; content: Buffer }[];
+  replyTo?: string;
+  /** Defaults to true, which also copies hersteaminitiative@gmail.com. Pass
+   *  false when the message is addressed to a member of the public. */
+  multiple?: boolean;
+  /** Defaults to false, matching the original fire-and-forget behaviour. Pass
+   *  true when the caller needs to know the send failed. */
+  throwOnError?: boolean;
 }) => {
   const transporter = nodemailer.createTransport(smtpConfig2);
-  const mailTo = [to, "hersteaminitiative@gmail.com"];
+  const mailTo = multiple ? [to, "hersteaminitiative@gmail.com"] : to;
   try {
     await transporter.sendMail({
       from,
@@ -68,9 +78,11 @@ export const sendEmail2 = async ({
       html,
       text,
       attachments,
+      replyTo,
     });
     console.log("Email sent successfully");
   } catch (error) {
     console.log(error);
+    if (throwOnError) throw error;
   }
 };
