@@ -163,7 +163,10 @@ export default function Footer() {
       </div>
 
       <div className="text-center text-gray-500 text-sm mt-10 border-t border-gray-800 pt-4">
-        © 2025 Juliet Ibrahim. All Rights Reserved
+        <div>© 2025 Juliet Ibrahim. All Rights Reserved</div>
+        <div className="mt-1 text-gray-600">
+          Powered by Vantage Creative Media
+        </div>
       </div>
     </footer>
   );
