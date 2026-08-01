@@ -240,9 +240,9 @@ export const confirmationTemplate = (registration: WaitlistRegistration) => {
           <p style="margin: 0 0 24px;">
             If anything above is wrong, just reply to this email and we will fix it.
           </p>
-          <p style="margin: 0; color: #111827;">&mdash; The Her STEAM Initiative team</p>
+          <p style="margin: 0; color: #111827;"> The Her STEAM Initiative team</p>
         </div>
-        <div style="padding: 20px 28px; background-color: #080b33; color: #ffffff; font-size: 13px;">
+        <div style="padding: 20px 28px; background-color: #080b33; color: #000000; font-size: 13px;">
           foundation@hersteaminitiative.org
         </div>
       </div>
@@ -252,7 +252,7 @@ export const confirmationTemplate = (registration: WaitlistRegistration) => {
 
 export const notificationTemplate = (
   registration: WaitlistRegistration,
-  receivedAt: Date
+  receivedAt: Date,
 ) => {
   const row = (label: string, value: string) => `
     <tr>
@@ -279,7 +279,7 @@ export const notificationTemplate = (
       registration.source,
       registration.interests.join("; "),
       registration.consent ? "yes" : "no",
-    ].join("\t")
+    ].join("\t"),
   );
 
   return `

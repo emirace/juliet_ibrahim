@@ -3,6 +3,7 @@ const IMAGES = {
   hero: new URL("./hero.png", import.meta.url).href,
   image: new URL("./image.JPG", import.meta.url).href,
   about: new URL("./about.JPG", import.meta.url).href,
+  about2: new URL("./about2.jpeg", import.meta.url).href,
   image2: new URL("./image2.JPG", import.meta.url).href,
   image3: new URL("./image3.JPG", import.meta.url).href,
   book1: new URL("./book1.JPG", import.meta.url).href,
