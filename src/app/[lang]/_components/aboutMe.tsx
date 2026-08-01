@@ -12,7 +12,7 @@ const AboutMe = () => {
         <div className=" rounded-full border border-white border-opacity-20 p-8 w-full h-[90vh]">
           <div className="relative rounded-full  overflow-hidden w-full h-full">
             <Image
-              src={IMAGES.about}
+              src={IMAGES.about2}
               alt="About Me"
               layout="fill"
               objectFit="cover"
@@ -39,24 +39,38 @@ const AboutMe = () => {
           About Me
         </h3>
         <h2 className="text-2xl lg:text-4xl font-medium mt-8 leading-tight">
-          From the heart of <span className="text-orange-500">Accra</span> to
-          the global stage of <span className="text-orange-500">Nollywood</span>{" "}
-          and beyond, Juliet Ibrahim’s journey is nothing short of
-          extraordinary.
+          Juliet Ibrahim is an{" "}
+          <span className="text-orange-500">award-winning actress</span>,
+          filmmaker, author, entrepreneur, humanitarian and creative
+          entrepreneur whose career has inspired{" "}
+          <span className="text-orange-500">millions</span> across Africa and
+          around the world.
         </h2>
         <p className="text-gray-400 mt-6 leading-relaxed">
-          Her rise from humble beginnings to becoming one of the most celebrated
-          figures in African cinema is a testament to passion, perseverance, and
-          authentic artistry. With over two decades of captivating performances,
-          every role she takes on tells a story of triumph and transformation—a
-          narrative that has inspired millions and redefined the essence of
-          modern stardom.
+          For more than twenty years, she has used storytelling not only to
+          entertain but to spark conversations, challenge perceptions, and
+          champion meaningful social change. Her work extends far beyond the
+          screen, reflecting a lifelong commitment to empowering women,
+          investing in young people, and creating opportunities where they are
+          needed most.
         </p>
         <p className="text-gray-400 mt-6 leading-relaxed">
-          Juliet’s influence extends far beyond the silver screen. Her
-          commitment to uplifting communities, championing education, and
-          advocating for women’s rights shines as brightly as her on-screen
-          presence.
+          That commitment gave birth to HER STEAM Initiative—a platform
+          dedicated to preparing girls and young women for the future through
+          education, mentorship, leadership development, innovation, and
+          entrepreneurship.
+        </p>
+        <p className="text-gray-400 mt-6 leading-relaxed">
+          Juliet believes that talent is universal, but opportunity is not.
+          Through strategic partnerships, transformative programs, and community
+          engagement, HER STEAM Initiative is helping bridge that gap by
+          equipping the next generation of female innovators with the skills and
+          confidence to lead in an increasingly technology-driven world.
+        </p>
+        <p className="text-gray-400 mt-6 leading-relaxed">
+          With every initiative, Juliet Ibrahim continues to prove that true
+          success is measured not only by personal achievement but by the lives
+          transformed along the way.
         </p>
 
         <div className="mt-10 flex gap-12">
