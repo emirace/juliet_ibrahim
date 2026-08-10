@@ -1,6 +1,7 @@
 import { NextRequest } from "next/server";
 import { sendEmail2 } from "@/utils/sendEmail";
 import { getWaitlistCollection } from "@/utils/mongodb";
+import { submitToGoogleForm } from "@/utils/googleForm";
 import {
   confirmationTemplate,
   notificationTemplate,
@@ -107,9 +108,19 @@ export async function POST(req: NextRequest) {
 
     const isNewRegistration = write.upsertedCount > 0;
 
-    // Past this point the registration is safely stored. Mail problems are
-    // logged but must not fail the request — the user would be told to retry
-    // something that already succeeded.
+    // Past this point the registration is safely stored. Mail and mirroring
+    // problems are logged but must not fail the request — the user would be
+    // told to retry something that already succeeded.
+
+    // Unconditional, unlike the team notification below: the sheet is an
+    // append-only log, so a registrant revising their preferences is meant to
+    // show up as a second row.
+    try {
+      await submitToGoogleForm(registration, now);
+    } catch (error) {
+      console.error("Evolution waitlist: Google Form mirror failed", error);
+    }
+
     try {
       await sendEmail2({
         from: `"The Evolution" <${process.env.STEAM_EMAIL_USER}>`,
